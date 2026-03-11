@@ -1,0 +1,4 @@
+package security
+
+class ConfiguraçaoDelogin {
+}
