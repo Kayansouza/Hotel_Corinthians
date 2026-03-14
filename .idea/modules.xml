@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/Hotel Bando De Loucos.iml" filepath="$PROJECT_DIR$/Hotel Bando De Loucos.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/Hotel---Corinthians-main (1).iml" filepath="$PROJECT_DIR$/.idea/Hotel---Corinthians-main (1).iml" />
-      <module fileurl="file://$PROJECT_DIR$/Hotel---Corinthians-main/Hotel---Corinthians-main2.iml" filepath="$PROJECT_DIR$/Hotel---Corinthians-main/Hotel---Corinthians-main2.iml" />
->>>>>>> 6b03a9d8d0cc242e4242bba5511084b09a7f158b
+      <module fileurl="file://$PROJECT_DIR$/Hotel---Corinthians-main.iml" filepath="$PROJECT_DIR$/Hotel---Corinthians-main.iml" />
     </modules>
   </component>
 </project>
