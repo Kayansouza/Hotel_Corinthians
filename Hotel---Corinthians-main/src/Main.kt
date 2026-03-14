@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import model.Cliente
 import model.Usuario
@@ -171,7 +170,6 @@ fun sairDoHotel(){
 fun erro() {
     println("Opção inválida. Por favor, escolha uma opção válida.")
 }
-=======
 import model.Cliente
 import model.Usuario
 
@@ -259,5 +257,3 @@ fun entrarComSenha() {
         println(" Login falhou! CPF ou senha incorretos.")
     }
 }
-
->>>>>>> 6b03a9d8d0cc242e4242bba5511084b09a7f158b
