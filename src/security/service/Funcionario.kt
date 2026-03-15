@@ -1,9 +1,13 @@
 package security.service
 
-class Funcionario(nome: String,
-                  cpf: String,
-                  idade: Int,
-                  cargo: String,
-                  senha: String) {
+
+
+class Funcionario(
+    nome: String,
+    cpf: Int,
+    idade: String,
+    cargo: String,
+    senha: String
+) {
 
 }

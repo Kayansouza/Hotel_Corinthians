@@ -14,7 +14,7 @@ class AuthService {
         val cliente = lista.find { it.cpf == cpf }
 
         // 2. Verificamos se ele existe E se a senha coincide
-        return if (cliente != null && cliente.senha == senha) {
+        return if (cliente != null && cliente.senhaHash == senha) {
             cliente // Sucesso!
         } else {
             null // Falha (o Main cuidará da mensagem de erro)

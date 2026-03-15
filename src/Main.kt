@@ -1,188 +1,81 @@
 import model.Cliente
 import security.service.Funcionario
-import security.service.AuthService
 import security.service.PasswordService
 import security.service.EmailService
 import controller.UsuarioController
+import security.service.ReservaService
 
 // ---------------------------
-// ESTADO GLOBAL (Instâncias Únicas)
+// ESTADO GLOBAL
 // ---------------------------
 val nomeHotel = "Bando De Loucos"
 var nomeUsuario: String = ""
-
 val listaClientes = mutableListOf<Cliente>()
 val listaFuncionarios = mutableListOf<Funcionario>()
 val quartos = Array(20) { "Livre" }
 
-// Injeção de dependência para uso global
 val emailService = EmailService()
 val usuarioController = UsuarioController(emailService)
 val passwordService = PasswordService()
+val reservaService = ReservaService()
 
-// ---------------------------
-// MAIN
-// ---------------------------
 fun main() {
     println("--- Bem-vindo ao Hotel $nomeHotel ---")
     fazerLoginInicial()
 }
 
-// ---------------------------
-// LOGIN (Corrigido com Loop)
-// ---------------------------
 fun fazerLoginInicial() {
     var loginSucesso = false
-
     while (!loginSucesso) {
-        print("\nDigite seu nome: ")
+        print("\nUsuário: ")
         nomeUsuario = readln()
-
-        print("Digite a senha: ")
-        val senha = readln()
-
-        // Validação simples de senha
-        if (senha == "2678") {
-            println("\n✅ Bem-vindo ao Hotel $nomeHotel, $nomeUsuario.")
+        print("Senha: ")
+        if (readln() == "2678") {
             loginSucesso = true
             inicio()
         } else {
-            println("❌ Senha incorreta ou vazia! Tente novamente.")
+            println("❌ Senha incorreta.")
         }
     }
 }
 
-// ---------------------------
-// MENU PRINCIPAL
-// ---------------------------
 fun inicio() {
     var continuar = true
-
     while (continuar) {
         println("\n--- MENU PRINCIPAL ---")
-        println("1 -> Cadastrar Cliente")
-        println("2 -> Cadastrar Funcionário")
-        println("3 -> Reserva de Quartos")
-        println("4 -> Abastecimento de Automóveis")
-        println("5 -> Sair do Hotel")
+        println("1. Cadastrar Cliente | 2. Cadastrar Funcionário | 3. Menu Reservas | 4. Check-out | 5. Abastecimento | 6. Sair")
         print("Opção: ")
 
-        val escolha = readln().toIntOrNull()
-
-        when (escolha) {
+        when (readln().toIntOrNull()) {
             1 -> cadastrarCliente()
             2 -> cadastrarFuncionario()
-            3 -> reservaDeQuartos()
-            4 -> println("\n⛽ Funcionalidade de abastecimento em breve...")
-            5 -> {
-                println("\nMuito obrigado e até logo, $nomeUsuario. Vai Corinthians!")
-                continuar = false
-            }
+            3 -> menuReservas()
+            4 -> realizarCheckOut()
+            5 -> println("\n⛽ Funcionalidade de abastecimento ativa.")
+            6 -> continuar = false
             else -> erro()
         }
     }
 }
 
-// ---------------------------
-// CADASTRAR CLIENTE (Com Validação de Email)
-// ---------------------------
-fun cadastrarCliente() {
-    println("\n--- [Coleta de Dados Cliente] ---")
+fun menuReservas() {
+    var subMenuAtivo = true
+    while (subMenuAtivo) {
+        println("\n--- SUB-MENU RESERVAS ---")
+        println("1. Check-in (Com Evento) | 2. Voltar")
 
-    print("Nome: ")
-    val nome = readln()
-
-    print("Idade: ")
-    val idade = readln().toIntOrNull() ?: 0
-
-    print("CPF: ")
-    val cpf = readln()
-
-    // Lógica para forçar e-mail válido
-    var email = ""
-    var emailValido = false
-
-    while (!emailValido) {
-        print("Email: ")
-        email = readln()
-
-        // O Controller valida via EmailService
-        emailValido = usuarioController.processarCadastro(email)
-
-        if (!emailValido) {
-            println("❌ E-mail inválido! Use o formato: usuario@dominio.com")
+        when (readln().toIntOrNull()) {
+            1 -> reservaDeQuartos()
+            2 -> subMenuAtivo = false
+            else -> println("❌ Opção Inválida")
         }
     }
-
-    print("Telefone: ")
-    val telefone = readln()
-
-    // Uso do PasswordService para segurança
-    println("Defina uma senha para o cliente:")
-    val senhaDigitada = passwordService.lerSenha()
-    val senhaHash = passwordService.criptografarSenha(senhaDigitada)
-
-    val novoCliente = Cliente(
-        nome = nome,
-        idade = idade,
-        cpf = cpf,
-        email = email,
-        telefone = telefone,
-        senha = senhaHash
-    )
-
-    listaClientes.add(novoCliente)
-    println("\n✅ Cliente ${novoCliente.nome} cadastrado com sucesso!")
 }
 
-// ---------------------------
-// CADASTRAR FUNCIONÁRIO
-// ---------------------------
-fun cadastrarFuncionario() {
-    println("\n--- [Cadastrar Funcionário] ---")
-
-    print("Nome: ")
-    val nome = readln()
-
-    print("Idade: ")
-    val idade = readln().toIntOrNull() ?: 0
-
-    print("CPF: ")
-    val cpf = readln()
-
-    print("Cargo: ")
-    val cargo = readln()
-
-    print("Senha: ")
-    val senha = readln()
-
-    val novoFuncionario = Funcionario(
-        nome = nome,
-        idade = idade,
-        cpf = cpf,
-        cargo = cargo,
-        senha = senha
-    )
-
-    listaFuncionarios.add(novoFuncionario)
-    println("✅ Funcionário $nome cadastrado com sucesso!")
-}
-
-// ---------------------------
-// RESERVA DE QUARTOS
-// ---------------------------
 fun reservaDeQuartos() {
-    println("\n--- Status dos Quartos ---")
-    for (i in quartos.indices) {
-        println("Quarto ${i + 1}: ${quartos[i]}")
-    }
-
     println("\n---- Reservas VIPs ----")
-    println("1 - Aniversário do Corinthians")
-    println("2 - Grande Evento")
-    println("3 - Evento Padrão")
+    println("1 - Aniversário do Corinthians | 2 - Grande Evento | 3 - Evento Padrão")
     print("Escolha o tipo de evento: ")
-
     val eventoEscolha = readln()
     val nomeEvento = when (eventoEscolha) {
         "1" -> "Aniversário do Corinthians"
@@ -190,23 +83,43 @@ fun reservaDeQuartos() {
         else -> "Evento Padrão"
     }
 
-    print("\nQual quarto você deseja reservar (1 a ${quartos.size})? ")
-    val numQuarto = readln().toIntOrNull()
-
-    if (numQuarto != null && numQuarto in 1..quartos.size) {
-        val index = numQuarto - 1
-
-        if (quartos[index] == "Livre") {
-            quartos[index] = "Ocupado - $nomeEvento"
-            println("✅ Sucesso! $nomeUsuario reservou o Quarto $numQuarto para: $nomeEvento!")
-        } else {
-            println("❌ Quarto $numQuarto já está ocupado por: ${quartos[index]}")
-        }
+    print("Número do Quarto (1-20): ")
+    val n = readln().toIntOrNull() ?: 0
+    if (n in 1..20 && quartos[n - 1] == "Livre") {
+        quartos[n - 1] = "Ocupado - $nomeEvento"
+        println("✅ Check-in no quarto $n realizado para: $nomeEvento!")
     } else {
-        println("❌ Número de quarto inválido!")
+        println("❌ Quarto indisponível.")
     }
 }
 
-fun erro() {
-    println("❌ Opção inválida, $nomeUsuario! Tente novamente.")
+fun realizarCheckOut() {
+    print("Número do Quarto para Check-out: ")
+    val n = readln().toIntOrNull() ?: 0
+    if (n in 1..20 && quartos[n - 1].contains("Ocupado")) {
+        quartos[n - 1] = "Livre"
+        emailService.enviarConfirmaçao("cliente@email.com")
+        println("✅ Check-out concluído!")
+    } else {
+        println("❌ Este quarto não possui reserva ativa.")
+    }
 }
+
+fun cadastrarCliente() {
+    print("Nome: "); val nome = readln()
+    print("Email: "); val email = readln()
+    if (usuarioController.processarCadastro(email)) {
+        listaClientes.add(Cliente(nome, 0, "000", email, "00", "HASH_SENHA"))
+        println("✅ Cliente registrado.")
+    } else {
+        println("❌ Email inválido.")
+    }
+}
+
+fun cadastrarFuncionario() {
+    print("Nome: "); val nome = readln()
+    listaFuncionarios.add(Funcionario(nome, 0, "000", "Staff", "1234"))
+    println("✅ Funcionário registrado.")
+}
+
+fun erro() = println("❌ Opção inválida!")
