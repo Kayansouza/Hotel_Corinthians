@@ -1,21 +1,21 @@
+import controller.FuncionarioController
 import model.Cliente
+import controller.UsuarioController
 import security.service.Funcionario
 import security.service.PasswordService
 import security.service.EmailService
-import controller.UsuarioController
 import security.service.ReservaService
 
-// ---------------------------
-// ESTADO GLOBAL
-// ---------------------------
+// --- ESTADO GLOBAL ---
 val nomeHotel = "Bando De Loucos"
 var nomeUsuario: String = ""
 val listaClientes = mutableListOf<Cliente>()
 val listaFuncionarios = mutableListOf<Funcionario>()
 val quartos = Array(20) { "Livre" }
+val funcionarioController = FuncionarioController()
 
 val emailService = EmailService()
-val usuarioController = UsuarioController(emailService)
+val usuarioController = UsuarioController()
 val passwordService = PasswordService()
 val reservaService = ReservaService()
 
@@ -106,20 +106,61 @@ fun realizarCheckOut() {
 }
 
 fun cadastrarCliente() {
-    print("Nome: "); val nome = readln()
-    print("Email: "); val email = readln()
-    if (usuarioController.processarCadastro(email)) {
-        listaClientes.add(Cliente(nome, 0, "000", email, "00", "HASH_SENHA"))
-        println("✅ Cliente registrado.")
+    println("\n--- CADASTRO DE CLIENTE ---")
+    print("Nome: "); val nome = readln().trim()
+    print("Ano de Nascimento: "); val inputAno = readln()
+    print("Email: "); val email = readln().trim()
+    print("Telefone: "); val tel = readln().trim()
+
+    val anoValidado = usuarioController.validarAno(inputAno)
+
+    // Usando .let para garantir segurança: só entra aqui se o ano for válido
+    if (usuarioController.processarCadastro(email, anoValidado, listaClientes)) {
+        anoValidado?.let { ano ->
+            val novoCliente = Cliente(
+                nome = nome,
+                anoDeNascimento = anoValidado!!,
+                cpf = "000",
+                email = email,
+                telefone = tel,
+                senhaHash = "HASH_SENHA"
+            )
+            listaClientes.add(novoCliente)
+            println("✅ Cadastro realizado com sucesso!")
+        }
     } else {
-        println("❌ Email inválido.")
+        println("❌ Dados inválidos. Verifique se o e-mail é válido e o ano está entre 1900-2026.")
     }
 }
-
 fun cadastrarFuncionario() {
-    print("Nome: "); val nome = readln()
-    listaFuncionarios.add(Funcionario(nome, 0, "000", "Staff", "1234"))
-    println("✅ Funcionário registrado.")
-}
+    println("\n--- CADASTRO DE FUNCIONÁRIO ---")
 
+    // 1. Coleta os dados do funcionário
+    print("Nome: "); val nome = readln().trim()
+    print("Ano de Nascimento: "); val inputAno = readln()
+    print("Email: "); val email = readln().trim()
+    print("Código Corporativo: "); val codigo = readln().trim()
+
+    // 2. Valida o ano usando a lógica base (do UsuarioController)
+    val anoValidado = usuarioController.validarAno(inputAno)
+
+    // 3. Processa tudo no FuncionarioController
+    if (funcionarioController.processarCadastroFuncionario(email, anoValidado, codigo, listaFuncionarios)) {
+
+        // 4. Se passou em tudo, registra!
+        val novoFuncionario = Funcionario(
+            nome = nome,
+            anoDeNascimento = anoValidado!!,
+            email = email,
+            cpf = "000",
+            cargo = "Staff",
+            senhaHash = "HASH_SENHA"
+        )
+        listaFuncionarios.add(novoFuncionario)
+        println("✅ Funcionário $nome registrado com sucesso!")
+
+    } else {
+        println("❌ Falha: Código inválido, e-mail mal formatado ou ano fora do intervalo.")
+    }
+}
 fun erro() = println("❌ Opção inválida!")
