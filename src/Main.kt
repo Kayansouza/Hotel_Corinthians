@@ -73,24 +73,38 @@ fun menuReservas() {
     }
 }
 
+
+
 fun reservaDeQuartos() {
     println("\n---- Reservas VIPs ----")
     println("1 - Aniversário do Corinthians | 2 - Grande Evento | 3 - Evento Padrão")
     print("Escolha o tipo de evento: ")
     val eventoEscolha = readln()
-    val nomeEvento = when (eventoEscolha) {
-        "1" -> "Aniversário do Corinthians"
-        "2" -> "Grande Evento"
-        else -> "Evento Padrão"
+
+    val (nomeEvento, valorDiaria) = when (eventoEscolha) {
+        "1" -> "Aniversário do Corinthians" to 500.0
+        "2" -> "Grande Evento" to 450.0
+        else -> "Evento Padrão" to 300.0
     }
+
+    print("Nome do Hóspede: ")
+    val nomeHospede = readln()
 
     print("Número do Quarto (1-20): ")
     val n = readln().toIntOrNull() ?: 0
+
     if (n in 1..20 && quartos[n - 1] == "Livre") {
-        quartos[n - 1] = "Ocupado - $nomeEvento"
-        println("✅ Check-in no quarto $n realizado para: $nomeEvento!")
+
+        print("Quantos dias de evento? ")
+        val dias = readln().toIntOrNull() ?: 1
+        val total = reservaService.calcularValorTotal(valorDiaria, dias)
+
+        quartos[n - 1] = "Ocupado ($nomeHospede)"
+        emailService.enviarConfirmaçao("cliente@email.com")
+        println("✅ Check-in no quarto $n realizado para $nomeHospede ($nomeEvento)!")
+        println("💰 Valor total para $dias dias: R$ ${"%.2f".format(total)}")
     } else {
-        println("❌ Quarto indisponível.")
+        println("❌ Quarto indisponível ou inexistente.")
     }
 }
 
