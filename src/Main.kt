@@ -5,6 +5,7 @@ import security.service.Funcionario
 import security.service.PasswordService
 import security.service.EmailService
 import security.service.ReservaService
+import model.Abastecimento
 
 // --- ESTADO GLOBAL ---
 val nomeHotel = "Bando De Loucos"
@@ -51,7 +52,7 @@ fun inicio() {
             2 -> cadastrarFuncionario()
             3 -> menuReservas()
             4 -> realizarCheckOut()
-            5 -> println("\n⛽ Funcionalidade de abastecimento ativa.")
+            5 -> abastecimento()
             6 -> continuar = false
             else -> erro()
         }
@@ -162,5 +163,49 @@ fun cadastrarFuncionario() {
     } else {
         println("❌ Falha: Código inválido, e-mail mal formatado ou ano fora do intervalo.")
     }
+}
+
+fun abastecimento() {
+    println("\n--- Posto Bando de Loucos ---") // Mantendo o padrão do seu projeto!
+    println("1 - Gasolina (R$ 6.00) | 2 - Etanol (R$ 5.00) | 3 - Álcool (R$ 4.00)")
+    print("Selecione o combustível: ")
+
+    val escolha = readln()
+
+    // Criando o objeto com base na escolha
+    val abastecimento = when (escolha) {
+        "1" -> Abastecimento("Gasolina", 6.0)
+        "2" -> Abastecimento("Etanol", 5.0)
+        "3" -> Abastecimento("Álcool", 4.0)
+        else -> null
+    }
+
+    if (abastecimento != null) {
+        print("Digite a quantidade de litros (ex: 10.5): ")
+
+        // Tratando a entrada para aceitar vírgula ou ponto
+        val litros = readln().replace(",", ".").toDoubleOrNull() ?: 0.0
+
+        if (litros > 0) {
+            exibirRecibo(abastecimento, litros)
+        } else {
+            println("Erro: Quantidade inválida.")
+        }
+    } else {
+        println("Erro: Opção de menu inexistente.")
+    }
+}
+
+// Função separada apenas para o Recibo (Single Responsibility Principle)
+fun exibirRecibo(info: Abastecimento, qtd: Double) {
+    val total = qtd * info.valorLitro
+    println("\n========================")
+    println("        RECIBO")
+    println("========================")
+    println("Produto:    ${info.tipo}")
+    println("Preço Unit: R$ ${info.valorLitro}")
+    println("Qtd:        $qtd L")
+    println("TOTAL:      R$ ${"%.2f".format(total)}")
+    println("========================\n")
 }
 fun erro() = println("❌ Opção inválida!")
