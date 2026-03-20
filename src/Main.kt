@@ -14,6 +14,8 @@ val listaClientes = mutableListOf<Cliente>()
 val listaFuncionarios = mutableListOf<Funcionario>()
 val quartos = Array(20) { "Livre" }
 val funcionarioController = FuncionarioController()
+val reservasalao = mutableListOf<String>()
+
 
 val emailService = EmailService()
 val usuarioController = UsuarioController()
@@ -44,16 +46,17 @@ fun inicio() {
     var continuar = true
     while (continuar) {
         println("\n--- MENU PRINCIPAL ---")
-        println("1. Cadastrar Cliente | 2. Cadastrar Funcionário | 3. Menu Reservas | 4. Check-out | 5. Abastecimento | 6. Sair")
+        println("1. Cadastrar Cliente | 2. Cadastrar Funcionário | 3. Menu Reservas | 4. reservaSalaoFestas | |  5. Check-out  | 6. Abastecimento | 7. Sair")
         print("Opção: ")
 
         when (readln().toIntOrNull()) {
             1 -> cadastrarCliente()
             2 -> cadastrarFuncionario()
             3 -> menuReservas()
-            4 -> realizarCheckOut()
-            5 -> abastecimento()
-            6 -> continuar = false
+            4 -> reservaSalaoFestas()
+            5 -> realizarCheckOut()
+            6 -> abastecimento()
+            7 -> continuar = false
             else -> erro()
         }
     }
@@ -62,17 +65,55 @@ fun inicio() {
 fun menuReservas() {
     var subMenuAtivo = true
     while (subMenuAtivo) {
-        println("\n--- SUB-MENU RESERVAS ---")
-        println("1. Check-in (Com Evento) | 2. Voltar")
+        println("\n--- 📅 CENTRAL DE RESERVAS ---")
+        println("1. Reservar Quarto (1-20)")
+        println("2. Reservar Salão de Festas (Por Data)") // <-- A NOVA OPÇÃO
+        println("3. Voltar")
+        print("Opção: ")
 
         when (readln().toIntOrNull()) {
-            1 -> reservaDeQuartos()
-            2 -> subMenuAtivo = false
+            1 -> reservaDeQuartos() // Esta pede número do quarto
+            2 -> reservaSalaoFestas() // ESTA vai pedir a data!
+            3 -> subMenuAtivo = false
             else -> println("❌ Opção Inválida")
         }
     }
 }
 
+
+// 1. Cria esta lista no topo do teu código, junto com as outras globais
+val datasOcupadasSalao = mutableListOf<String>()
+
+fun reservaSalaoFestas() {
+    println("\n---- 🎊 Reserva do Salão de Festas ----")
+
+    // Identificação do Cliente
+    print("Digite o e-mail do cliente: ")
+    val email = readln().trim()
+    val cliente = listaClientes.find { it.email.equals(email, ignoreCase = true) }
+
+    if (cliente == null) {
+        println("❌ Erro: Cliente não encontrado. Cadastre-o primeiro.")
+        return
+    }
+
+
+    print("Para qual data deseja reservar o salão? (ex: 25/12): ")
+    val dataDesejada = readln().trim()
+
+    // Verificamos se a data já está na lista de ocupadas
+
+    if (datasOcupadasSalao.contains(dataDesejada)) {
+        println(" Sinto muito, o salão já está ocupado no dia $dataDesejada!")
+    } else {
+        // Se estiver livre, reservamos!
+
+        datasOcupadasSalao.add(dataDesejada)
+        cliente.historico.add("Reserva Salão: Data $dataDesejada")
+
+        println(" Sucesso! Salão reservado para ${cliente.nome} no dia $dataDesejada.")
+    }
+}
 
 fun reservaDeQuartos() {
     println("\n---- Reservas VIPs ----")
@@ -193,6 +234,7 @@ fun cadastrarCliente() {
         println("❌ Dados inválidos. Verifique o e-mail e o ano (1900-2026).")
     }
 }
+
 fun cadastrarFuncionario() {
     println("\n--- CADASTRO DE FUNCIONÁRIO ---")
 

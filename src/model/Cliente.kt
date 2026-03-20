@@ -6,9 +6,11 @@ package model
 // Em model/Cliente.kt
 data class Cliente(
     val nome: String,
-    val anoDeNascimento: Int, // Adicionamos esse campo!
-    val cpf: String,
+    val anoDeNascimento: Int,
     val email: String,
     val telefone: String,
-    val senhaHash: String
+    val cpf: String,
+    val senhaHash: String,
+    // O SEGREDO: Ela precisa ser uma MutableList e já começar criada
+    val historico: MutableList<String> = mutableListOf()
 )

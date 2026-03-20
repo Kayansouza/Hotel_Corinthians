@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="268089b4-5089-4e28-96cd-008ccd616bba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/HospedeController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Hospedes.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/security/service/HospedeService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/salao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/security/service/ReservaSalao.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/MainKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/controller/HotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/controller/HotelController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/controller/ReservaService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/model/Quarto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/model/Quarto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/HotelController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/HotelController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Cliente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cliente.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/security/service/HospedeService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/security/service/HospedeService.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +51,9 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="3AxJfvglj9oJeU3gPZx3ujf30uU" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -119,12 +118,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/Main.kt</url>
-          <line>256</line>
-          <properties>
+          <line>303</line>
+          <properties method="exibirRecibo">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/Main.kt</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

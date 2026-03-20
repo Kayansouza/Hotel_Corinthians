@@ -22,7 +22,7 @@ class HospedeSerivce {
         bancoDeDadosHospede.add(novoHospede)
 
         return if (ehGratuito) {
-            "✅ Hóspede $nome cadastrado com sucesso GRATUIDADE!"
+            " Hóspede $nome cadastrado com sucesso GRATUIDADE!"
         } else {
             "Sucesso: Hóspede $nome cadastrado com sucesso."
         }
