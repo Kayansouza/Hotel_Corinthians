@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/MainKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/model/Quarto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/model/Quarto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/HotelController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/HotelController.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

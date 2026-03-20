@@ -109,14 +109,32 @@ fun reservaDeQuartos() {
 }
 
 fun realizarCheckOut() {
+
+    println("-------- Sistema de Check-out --------")
     print("Número do Quarto para Check-out: ")
+
     val n = readln().toIntOrNull() ?: 0
-    if (n in 1..20 && quartos[n - 1].contains("Ocupado")) {
-        quartos[n - 1] = "Livre"
-        emailService.enviarConfirmaçao("cliente@email.com")
-        println("✅ Check-out concluído!")
+
+    if (n in 1..20) {
+        val statusAtual = quartos[n - 1]
+
+        if (statusAtual != "Livre") {
+            println("Quarto $n encontrado: $statusAtual")
+
+            print("Confirma saída e limpeza do quarto? (S/N): ")
+            val confirma = readln().uppercase()
+
+            if (confirma == "S") {
+                quartos[n - 1] = "Livre"
+                println("✅ Check-out realizado! O quarto $n agora está disponível e limpo.")
+            } else {
+                println("Ação cancelada. O quarto continua reservado")
+            }
+        } else {
+            println("❌ O quarto $n já está livre e precisa ser limpo.")
+        }
     } else {
-        println("❌ Este quarto não possui reserva ativa.")
+        println("❌ Quarto inexistente.")
     }
 }
 
