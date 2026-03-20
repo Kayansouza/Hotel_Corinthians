@@ -74,7 +74,6 @@ fun menuReservas() {
 }
 
 
-
 fun reservaDeQuartos() {
     println("\n---- Reservas VIPs ----")
     println("1 - Aniversário do Corinthians | 2 - Grande Evento | 3 - Evento Padrão")
@@ -87,26 +86,49 @@ fun reservaDeQuartos() {
         else -> "Evento Padrão" to 300.0
     }
 
-    print("Nome do Hóspede: ")
-    val nomeHospede = readln()
+    // --- MELHORIA: BUSCA POR EMAIL PARA HISTÓRICO ---
+    print("Digite o Email do Hóspede cadastrado: ")
+    val emailBusca = readln().trim()
+    val clienteEncontrado = listaClientes.find { it.email.equals(emailBusca, ignoreCase = true) }
+
+    if (clienteEncontrado == null) {
+        println("❌ Erro: Cliente não encontrado. Cadastre o cliente primeiro.")
+        return
+    }
 
     print("Número do Quarto (1-20): ")
     val n = readln().toIntOrNull() ?: 0
 
     if (n in 1..20 && quartos[n - 1] == "Livre") {
-
         print("Quantos dias de evento? ")
         val dias = readln().toIntOrNull() ?: 1
-        val total = reservaService.calcularValorTotal(valorDiaria, dias)
 
-        quartos[n - 1] = "Ocupado ($nomeHospede)"
-        emailService.enviarConfirmaçao("cliente@email.com")
-        println("✅ Check-in no quarto $n realizado para $nomeHospede ($nomeEvento)!")
-        println("💰 Valor total para $dias dias: R$ ${"%.2f".format(total)}")
+        // --- MELHORIA: LÓGICA DE GRATUIDADE (Ex: Menores de 6 anos) ---
+        val anoAtual = 2026
+        val idade = anoAtual - clienteEncontrado.anoDeNascimento
+
+        val total = if (idade < 6) {
+            println("🎁 Gratuidades: Cliente menor de 6 anos não paga diária.")
+            0.0
+        } else {
+            reservaService.calcularValorTotal(valorDiaria, dias)
+        }
+
+        // --- MELHORIA: SALVANDO NO HISTÓRICO DO CLIENTE ---
+        val registroHistorico = "Reserva Quarto $n: $nomeEvento ($dias dias) - R$ $total"
+        clienteEncontrado.email.add(registroHistorico) // Certifica-te que 'historico' existe na model Cliente
+
+        quartos[n - 1] = "Ocupado (${clienteEncontrado.nome})"
+        emailService.enviarConfirmaçao(clienteEncontrado.email)
+
+        println("✅ Check-in realizado para ${clienteEncontrado.nome}!")
+        println("💰 Valor total: R$ ${"%.2f".format(total)}")
     } else {
         println("❌ Quarto indisponível ou inexistente.")
     }
 }
+
+private fun String.add(registroHistorico: String) {}
 
 fun realizarCheckOut() {
 
@@ -145,24 +167,30 @@ fun cadastrarCliente() {
     print("Email: "); val email = readln().trim()
     print("Telefone: "); val tel = readln().trim()
 
+    // --- MELHORIA: VERIFICAR SE EMAIL JÁ EXISTE ---
+    val emailDuplicado = listaClientes.any { it.email.equals(email, ignoreCase = true) }
+    if (emailDuplicado) {
+        println("❌ Erro: Este e-mail já está cadastrado para outro cliente.")
+        return
+    }
+
     val anoValidado = usuarioController.validarAno(inputAno)
 
-    // Usando .let para garantir segurança: só entra aqui se o ano for válido
     if (usuarioController.processarCadastro(email, anoValidado, listaClientes)) {
         anoValidado?.let { ano ->
             val novoCliente = Cliente(
                 nome = nome,
-                anoDeNascimento = anoValidado!!,
+                anoDeNascimento = ano,
                 cpf = "000",
                 email = email,
                 telefone = tel,
                 senhaHash = "HASH_SENHA"
             )
             listaClientes.add(novoCliente)
-            println("✅ Cadastro realizado com sucesso!")
+            println("✅ Cadastro de $nome realizado com sucesso!")
         }
     } else {
-        println("❌ Dados inválidos. Verifique se o e-mail é válido e o ano está entre 1900-2026.")
+        println("❌ Dados inválidos. Verifique o e-mail e o ano (1900-2026).")
     }
 }
 fun cadastrarFuncionario() {
@@ -172,6 +200,7 @@ fun cadastrarFuncionario() {
     print("Nome: "); val nome = readln().trim()
     print("Ano de Nascimento: "); val inputAno = readln()
     print("Email: "); val email = readln().trim()
+    println("Cargo: "); val cargo = readln().trim()
     print("Código Corporativo: "); val codigo = readln().trim()
 
     // 2. Valida o ano usando a lógica base (do UsuarioController)
@@ -186,7 +215,7 @@ fun cadastrarFuncionario() {
             anoDeNascimento = anoValidado!!,
             email = email,
             cpf = "000",
-            cargo = "Staff",
+            cargo = cargo,
             senhaHash = "HASH_SENHA"
         )
         listaFuncionarios.add(novoFuncionario)
@@ -225,6 +254,7 @@ fun abastecimento() {
         }
     } else {
         println("Erro: Opção de menu inexistente.")
+
     }
 }
 
