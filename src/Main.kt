@@ -1,3 +1,5 @@
+import controller.ArCondicionadoController
+import controller.EventoController
 import controller.FuncionarioController
 import model.Cliente
 import controller.UsuarioController
@@ -15,7 +17,8 @@ val listaFuncionarios = mutableListOf<Funcionario>()
 val quartos = Array(20) { "Livre" }
 val funcionarioController = FuncionarioController()
 val reservasalao = mutableListOf<String>()
-
+val eventoController = EventoController()
+val arController = ArCondicionadoController()
 
 val emailService = EmailService()
 val usuarioController = UsuarioController()
@@ -45,49 +48,108 @@ fun fazerLoginInicial() {
 fun inicio() {
     var continuar = true
     while (continuar) {
-        println("\n--- MENU PRINCIPAL ---")
-        println("1. Cadastrar Cliente | 2. Cadastrar Funcionário | 3. Menu Reservas | 4. reservaSalaoFestas | |  5. Check-out  | 6. Abastecimento | 7. Sair")
+        println("\n--- 🏨 HOTEL BANDO DE LOUCOS ---")
+        // Aqui eu organizei o menu para chamar TODAS as suas funções
+        println("1. Clientes | 2. Funcionários | 3. Reservas VIP (Quartos) | 4. Eventos (Auditórios)")
+        println("5. Salão de Festas | 6. Check-out | 7. Abastecimento | 8. Ar-Condicionado | 9. Pesquisar Hóspede | 10. Sair")
         print("Opção: ")
 
         when (readln().toIntOrNull()) {
             1 -> cadastrarCliente()
             2 -> cadastrarFuncionario()
-            3 -> menuReservas()
-            4 -> reservaSalaoFestas()
-            5 -> realizarCheckOut()
-            6 -> abastecimento()
-            7 -> continuar = false
+            3 -> reservaDeQuartos()    // CHAMA SUA LÓGICA VIP
+            4 -> menuReservas()        // CHAMA SUA LÓGICA DE AUDITÓRIOS
+            5 -> reservaSalaoFestas()  // CHAMA SUA LÓGICA DO SALÃO
+            6 -> realizarCheckOut()
+            7 -> abastecimento()       // CHAMA SUA LÓGICA DOS POSTOS
+            8 -> arController.comparar(nomeUsuario)
+            9 -> pesquisarHospede()    // CHAMA SUA LÓGICA DE BUSCA
+            10 -> {
+                println("Muito obrigado e até logo, $nomeUsuario.")
+                continuar = false
+            }
             else -> erro()
         }
     }
 }
-
 fun menuReservas() {
-    var subMenuAtivo = true
-    while (subMenuAtivo) {
-        println("\n--- 📅 CENTRAL DE RESERVAS ---")
-        println("1. Reservar Quarto (1-20)")
-        println("2. Reservar Salão de Festas (Por Data)") // <-- A NOVA OPÇÃO
-        println("3. Voltar")
-        print("Opção: ")
+    println("\n--- [Eventos] $nomeHotel ---")
 
-        when (readln().toIntOrNull()) {
-            1 -> reservaDeQuartos() // Esta pede número do quarto
-            2 -> reservaSalaoFestas() // ESTA vai pedir a data!
-            3 -> subMenuAtivo = false
-            else -> println("❌ Opção Inválida")
-        }
+    // 1. Auditório
+    print("Quantidade de convidados: ")
+    val convidados = readln().toIntOrNull() ?: -1
+
+    if (convidados <= 0 || convidados > 350) {
+        println("❌ Número de convidados inválido.")
+        return // Volta ao menu principal
+    }
+
+    val (auditorio, extras) = if (convidados <= 220) {
+        val cadeirasExtras = if (convidados > 150) convidados - 150 else 0
+        "Laranja" to cadeirasExtras
+    } else {
+        "Colorado" to 0
+    }
+    println("Auditório selecionado: $auditorio" + if (extras > 0) " ($extras cadeiras adicionais)" else "")
+
+    // 2. Agenda (Dia e Hora)
+    print("Dia da semana: ")
+    val dia = readln().lowercase().trim() // Ex: segunda
+    print("Hora inicial (0-23): ")
+    val horaIni = readln().toIntOrNull() ?: -1
+    print("Duração do evento (horas): ")
+    val duracao = readln().toIntOrNull() ?: 10
+
+    // Validação de horário
+    val limiteHora = if (dia == "sabado" || dia == "domingo") 15 else 23
+    if (horaIni < 7 || horaIni > limiteHora || (horaIni + duracao) > limiteHora) {
+        println("❌ Erro: O hotel só aceita eventos iniciando entre 07h e $limiteHora h.")
+        return
+    } else if ((horaIni + duracao) > limiteHora) {
+        println("❌ Erro: Com essa duração, o evento terminaria às ${horaIni + duracao}h," +
+                " ultrapassando o limite de $limiteHora h.")
+        return
+    }
+
+    print("Nome da empresa: ")
+    val empresa = readln()
+
+    // 3. Garçons e Buffet
+    // Regra: 1 garçom a cada 12 pessoas + 1 a cada 2 horas de evento
+    val garconsBase = Math.ceil(convidados / 12.0).toInt()
+    val garconsReforco = Math.floor(duracao / 2.0).toInt()
+    val totalGarcons = garconsBase + garconsReforco
+    val custoGarcons = totalGarcons * duracao * 10.50
+
+    // Buffet
+    val cafeL = convidados * 0.2
+    val aguaL = convidados * 0.5
+    val salgados = convidados * 7
+    val custoBuffet = (cafeL * 0.80) + (aguaL * 0.40) + (Math.ceil(salgados / 100.0) * 34.00)
+
+    val totalGeral = custoGarcons + custoBuffet
+
+    // 4. Relatório Final
+    println("\n--- RESUMO DO EVENTO ---")
+    println("Empresa: $empresa | Auditório: $auditorio")
+    println("Data: $dia às ${horaIni}h (Duração: ${duracao}h)")
+    println("Garçons: $totalGarcons | Custo: R$ ${"%.2f".format(custoGarcons)}")
+    println("Buffet: R$ ${"%.2f".format(custoBuffet)}")
+    println("TOTAL DO EVENTO: R$ ${"%.2f".format(totalGeral)}")
+
+    print("\n$nomeUsuario, confirma a reserva? (S/N): ")
+    if (readln().uppercase() == "S") {
+        println("✅ Reserva efetuada com sucesso.")
+        // Aqui você pode somar o totalGeral em uma variável global de receita para o relatório final
+    } else {
+        println("Reserva não efetuada.")
     }
 }
-
-
-// 1. Cria esta lista no topo do teu código, junto com as outras globais
 val datasOcupadasSalao = mutableListOf<String>()
 
 fun reservaSalaoFestas() {
     println("\n---- 🎊 Reserva do Salão de Festas ----")
 
-    // Identificação do Cliente
     print("Digite o e-mail do cliente: ")
     val email = readln().trim()
     val cliente = listaClientes.find { it.email.equals(email, ignoreCase = true) }
@@ -97,82 +159,84 @@ fun reservaSalaoFestas() {
         return
     }
 
-
     print("Para qual data deseja reservar o salão? (ex: 25/12): ")
     val dataDesejada = readln().trim()
 
-    // Verificamos se a data já está na lista de ocupadas
+    // CORREÇÃO 1: tinha um readln() solto aqui sem print() nenhum antes,
+    // o usuário ficava travado sem saber o que digitar. Removido!
 
     if (datasOcupadasSalao.contains(dataDesejada)) {
-        println(" Sinto muito, o salão já está ocupado no dia $dataDesejada!")
-    } else {
-        // Se estiver livre, reservamos!
+        println("⚠️ Sinto muito, o salão já está ocupado no dia $dataDesejada!")
 
+        // CORREÇÃO 2: antes chamava reservaSalaoFestas() direto sem perguntar nada,
+        // agora pergunta primeiro se quer outra data
+        print("Deseja escolher outra data? (s/n): ")
+        val resposta = readln().trim().lowercase()
+        if (resposta == "s") {
+            reservaSalaoFestas()
+        } else {
+            println("Voltando ao menu...")
+        }
+    } else {
         datasOcupadasSalao.add(dataDesejada)
         cliente.historico.add("Reserva Salão: Data $dataDesejada")
-
-        println(" Sucesso! Salão reservado para ${cliente.nome} no dia $dataDesejada.")
+        println("✅ Sucesso! Salão reservado para ${cliente.nome} no dia $dataDesejada.")
     }
 }
 
 fun reservaDeQuartos() {
-    println("\n---- Reservas VIPs ----")
-    println("1 - Aniversário do Corinthians | 2 - Grande Evento | 3 - Evento Padrão")
-    print("Escolha o tipo de evento: ")
-    val eventoEscolha = readln()
+    println("\n---- [Reservas] $nomeHotel ----")
 
-    val (nomeEvento, valorDiaria) = when (eventoEscolha) {
-        "1" -> "Aniversário do Corinthians" to 500.0
-        "2" -> "Grande Evento" to 450.0
-        else -> "Evento Padrão" to 300.0
+    // Suas validações originais de diária
+    print("Informe o valor da diária: ")
+    val valorDiaria = readln().toDoubleOrNull() ?: 0.0
+    print("Informe a quantidade de diárias (1-30): ")
+    val dias = readln().toIntOrNull() ?: 0
+
+    if (valorDiaria <= 0 || dias !in 1..30) {
+        println("❌ Valor Inválido, $nomeUsuario")
+        return // Volta pro menu como você queria
     }
 
-    // --- MELHORIA: BUSCA POR EMAIL PARA HISTÓRICO ---
-    print("Digite o Email do Hóspede cadastrado: ")
-    val emailBusca = readln().trim()
-    val clienteEncontrado = listaClientes.find { it.email.equals(emailBusca, ignoreCase = true) }
+    print("Informe o nome do hóspede: ")
+    val nomeHospede = readln()
 
-    if (clienteEncontrado == null) {
-        println("❌ Erro: Cliente não encontrado. Cadastre o cliente primeiro.")
+    // O NOVO: Tipo de quarto (Fatores do Terabithia)
+    print("Tipo de quarto (S-Standard | E-Executivo | L-Luxo): ")
+    val tipo = readln().uppercase()
+    val fator = when(tipo) {
+        "E" -> 1.35
+        "L" -> 1.65
+        else -> 1.0
+    }
+
+    // Sua lógica de escolher quarto (1-20)
+    print("Escolha um quarto (1-20): ")
+    val n = readln().toIntOrNull() ?: 0
+
+    if (n !in 1..20 || quartos[n-1] != "Livre") {
+        println("⚠️ Quarto ocupado ou inválido!")
+        // Aqui você pode listar os livres usando quartos.forEachIndexed
         return
     }
 
-    print("Número do Quarto (1-20): ")
-    val n = readln().toIntOrNull() ?: 0
+    // CÁLCULOS (O que mudou)
+    val subtotal = valorDiaria * dias * fator
+    val taxa = subtotal * 0.10
+    val totalFinal = subtotal + taxa
 
-    if (n in 1..20 && quartos[n - 1] == "Livre") {
-        print("Quantos dias de evento? ")
-        val dias = readln().toIntOrNull() ?: 1
+    println("\n--- RESUMO ---")
+    println("Hóspede: $nomeHospede | Quarto: $n")
+    println("Total: R$ ${"%.2f".format(totalFinal)}")
 
-        // --- MELHORIA: LÓGICA DE GRATUIDADE (Ex: Menores de 6 anos) ---
-        val anoAtual = 2026
-        val idade = anoAtual - clienteEncontrado.anoDeNascimento
-
-        val total = if (idade < 6) {
-            println("🎁 Gratuidades: Cliente menor de 6 anos não paga diária.")
-            0.0
-        } else {
-            reservaService.calcularValorTotal(valorDiaria, dias)
-        }
-
-        // --- MELHORIA: SALVANDO NO HISTÓRICO DO CLIENTE ---
-        val registroHistorico = "Reserva Quarto $n: $nomeEvento ($dias dias) - R$ $total"
-        clienteEncontrado.email.add(registroHistorico) // Certifica-te que 'historico' existe na model Cliente
-
-        quartos[n - 1] = "Ocupado (${clienteEncontrado.nome})"
-        emailService.enviarConfirmaçao(clienteEncontrado.email)
-
-        println("✅ Check-in realizado para ${clienteEncontrado.nome}!")
-        println("💰 Valor total: R$ ${"%.2f".format(total)}")
-    } else {
-        println("❌ Quarto indisponível ou inexistente.")
+    print("$nomeUsuario, confirma a reserva? (S/N): ")
+    if (readln().uppercase() == "S") {
+        quartos[n-1] = "Ocupado ($nomeHospede)"
+        println("✅ Reserva efetuada!")
     }
 }
 
-private fun String.add(registroHistorico: String) {}
-
 fun realizarCheckOut() {
-
     println("-------- Sistema de Check-out --------")
     print("Número do Quarto para Check-out: ")
 
@@ -183,7 +247,6 @@ fun realizarCheckOut() {
 
         if (statusAtual != "Livre") {
             println("Quarto $n encontrado: $statusAtual")
-
             print("Confirma saída e limpeza do quarto? (S/N): ")
             val confirma = readln().uppercase()
 
@@ -191,13 +254,31 @@ fun realizarCheckOut() {
                 quartos[n - 1] = "Livre"
                 println("✅ Check-out realizado! O quarto $n agora está disponível e limpo.")
             } else {
-                println("Ação cancelada. O quarto continua reservado")
+                println("Ação cancelada. O quarto continua reservado.")
             }
         } else {
-            println("❌ O quarto $n já está livre e precisa ser limpo.")
+            println("❌ O quarto $n já está livre.")
         }
     } else {
         println("❌ Quarto inexistente.")
+    }
+}
+
+fun pesquisarHospede() {
+    println("\n--- Pesquisar Hóspede ---")
+    print("Digite o início do nome (Prefixo): ")
+    val busca = readln().lowercase()
+
+    // Filtra a sua lista original
+    val encontrados = listaClientes.filter { it.nome.lowercase().startsWith(busca) }
+
+    if (encontrados.isEmpty()) {
+        println("❌ Hóspede não encontrado.")
+    } else {
+        println("Resultados encontrados:")
+        encontrados.forEach { cliente ->
+            println("- ${cliente.nome} (E-mail: ${cliente.email})")
+        }
     }
 }
 
@@ -208,7 +289,6 @@ fun cadastrarCliente() {
     print("Email: "); val email = readln().trim()
     print("Telefone: "); val tel = readln().trim()
 
-    // --- MELHORIA: VERIFICAR SE EMAIL JÁ EXISTE ---
     val emailDuplicado = listaClientes.any { it.email.equals(email, ignoreCase = true) }
     if (emailDuplicado) {
         println("❌ Erro: Este e-mail já está cadastrado para outro cliente.")
@@ -237,21 +317,15 @@ fun cadastrarCliente() {
 
 fun cadastrarFuncionario() {
     println("\n--- CADASTRO DE FUNCIONÁRIO ---")
-
-    // 1. Coleta os dados do funcionário
     print("Nome: "); val nome = readln().trim()
     print("Ano de Nascimento: "); val inputAno = readln()
     print("Email: "); val email = readln().trim()
-    println("Cargo: "); val cargo = readln().trim()
+    print("Cargo: "); val cargo = readln().trim()
     print("Código Corporativo: "); val codigo = readln().trim()
 
-    // 2. Valida o ano usando a lógica base (do UsuarioController)
     val anoValidado = usuarioController.validarAno(inputAno)
 
-    // 3. Processa tudo no FuncionarioController
     if (funcionarioController.processarCadastroFuncionario(email, anoValidado, codigo, listaFuncionarios)) {
-
-        // 4. Se passou em tudo, registra!
         val novoFuncionario = Funcionario(
             nome = nome,
             anoDeNascimento = anoValidado!!,
@@ -262,45 +336,57 @@ fun cadastrarFuncionario() {
         )
         listaFuncionarios.add(novoFuncionario)
         println("✅ Funcionário $nome registrado com sucesso!")
-
     } else {
         println("❌ Falha: Código inválido, e-mail mal formatado ou ano fora do intervalo.")
     }
 }
 
 fun abastecimento() {
-    println("\n--- Posto Bando de Loucos ---") // Mantendo o padrão do seu projeto!
-    println("1 - Gasolina (R$ 6.00) | 2 - Etanol (R$ 5.00) | 3 - Álcool (R$ 4.00)")
-    print("Selecione o combustível: ")
+    println("\n--- [Abastecimento] $nomeHotel ---")
 
-    val escolha = readln()
+    // Entrada de dados: Wayne Oil
+    println("Posto Wayne Oil:")
+    print("Preço do Álcool: ")
+    val alcoolWayne = readln().replace(",", ".").toDoubleOrNull() ?: 0.0
+    print("Preço da Gasolina: ")
+    val gasolinaWayne = readln().replace(",", ".").toDoubleOrNull() ?: 0.0
 
-    // Criando o objeto com base na escolha
-    val abastecimento = when (escolha) {
-        "1" -> Abastecimento("Gasolina", 6.0)
-        "2" -> Abastecimento("Etanol", 5.0)
-        "3" -> Abastecimento("Álcool", 4.0)
-        else -> null
-    }
+    // Entrada de dados: Stark Petrol
+    println("\nPosto Stark Petrol:")
+    print("Preço do Álcool: ")
+    val alcoolStark = readln().replace(",", ".").toDoubleOrNull() ?: 0.0
+    print("Preço da Gasolina: ")
+    val gasolinaStark = readln().replace(",", ".").toDoubleOrNull() ?: 0.0
 
-    if (abastecimento != null) {
-        print("Digite a quantidade de litros (ex: 10.5): ")
+    val tanque = 42.0
 
-        // Tratando a entrada para aceitar vírgula ou ponto
-        val litros = readln().replace(",", ".").toDoubleOrNull() ?: 0.0
-
-        if (litros > 0) {
-            exibirRecibo(abastecimento, litros)
-        } else {
-            println("Erro: Quantidade inválida.")
-        }
+    // Lógica para o Wayne Oil
+    val (combustivelWayne, precoWayne) = if (alcoolWayne <= gasolinaWayne * 0.7) {
+        "Álcool" to alcoolWayne
     } else {
-        println("Erro: Opção de menu inexistente.")
+        "Gasolina" to gasolinaWayne
+    }
+    val totalWayne = precoWayne * tanque
 
+    // Lógica para o Stark Petrol
+    val (combustivelStark, precoStark) = if (alcoolStark <= gasolinaStark * 0.7) {
+        "Álcool" to alcoolStark
+    } else {
+        "Gasolina" to gasolinaStark
+    }
+    val totalStark = precoStark * tanque
+
+    // Exibição dos resultados
+    println("\n${"%.2f".format(totalWayne)} - Wayne Oil: melhor opção = $combustivelWayne")
+    println("${"%.2f".format(totalStark)} - Stark Petrol: melhor opção = $combustivelStark")
+
+    // Veredito Final
+    if (totalWayne < totalStark) {
+        println("\n$nomeUsuario, é mais barato abastecer com $combustivelWayne no posto Wayne Oil.")
+    } else {
+        println("\n$nomeUsuario, é mais barato abastecer com $combustivelStark no posto Stark Petrol.")
     }
 }
-
-// Função separada apenas para o Recibo (Single Responsibility Principle)
 fun exibirRecibo(info: Abastecimento, qtd: Double) {
     val total = qtd * info.valorLitro
     println("\n========================")
@@ -312,4 +398,5 @@ fun exibirRecibo(info: Abastecimento, qtd: Double) {
     println("TOTAL:      R$ ${"%.2f".format(total)}")
     println("========================\n")
 }
+
 fun erro() = println("❌ Opção inválida!")

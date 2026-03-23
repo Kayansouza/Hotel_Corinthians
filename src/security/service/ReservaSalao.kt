@@ -32,9 +32,13 @@ fun reservaSalaoFestas() {
 
         cliente.historico.add("Evento Salão: Dia $dataDesejada - R$ $valorAluguel")
 
+
         // Bloqueia a data
         datasReservadasSalao.add(dataDesejada)
 
-        println("✅ Salão reservado com sucesso para ${cliente.nome} no dia $dataDesejada!")
+        println("✅ Salão reservado com sucesso para ${cliente.nome} no dia")
+
     }
 }
+
+private fun String.add(cadeiraDesejada: String) {}
