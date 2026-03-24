@@ -30,7 +30,7 @@ fun reservaSalaoFestas() {
         // 4. Cálculo e Registro
         val valorAluguel = 1200.00 // Preço fixo do salão
 
-        cliente.historico.add("Evento Salão: Dia $dataDesejada - R$ $valorAluguel")
+        cliente.cpf.add("Evento Salão: Dia $dataDesejada - R$ $valorAluguel")
 
 
         // Bloqueia a data
