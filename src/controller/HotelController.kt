@@ -1,10 +1,10 @@
 package controller
 
 import security.service.HospedeSerivce
-import security.service.ReservaService
+import security.service.ReservationService
 
 class HotelController(
-    private val reservaService: ReservaService = ReservaService(),
+    private val reservationService: ReservationService = ReservationService(),
     private val hospedeService: HospedeSerivce = HospedeSerivce()
 ) {
 
@@ -26,7 +26,7 @@ class HotelController(
         print("Quantas diárias deseja reservar para ${hospede.nome}? ")
         val dias = readln().toIntOrNull() ?: 0
 
-        val total = reservaService.calcularValorTotal(valorDiaria, dias)
+        val total = reservationService.calculateTotalPrice(valorDiaria, dias)
 
         if (total > 0) {
 

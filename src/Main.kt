@@ -1,12 +1,8 @@
 import controller.*
 import model.Cliente
 import security.service.Funcionario
-import security.service.EmailService
-import security.service.ReservaService
-import model.Abastecimento
 import kotlin.math.ceil
 import kotlin.math.floor
-import model.teste
 
 // --- 🌍 ESTADO GLOBAL (ÚNICO E CORRIGIDO) ---
 val nomeHotel = "Bando De Loucos"
