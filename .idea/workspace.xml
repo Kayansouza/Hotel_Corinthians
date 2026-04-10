@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="268089b4-5089-4e28-96cd-008ccd616bba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/security/service/ReservationService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/HotelController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/HotelController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Reserva.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Reservation.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/teste.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/service/ReservaService.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
