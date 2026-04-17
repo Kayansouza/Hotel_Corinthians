@@ -1,0 +1,10 @@
+{
+  "_id": "ObjectId('hsp002')",
+  "Nome": "LeBron James",
+  "CPF":  "123.456.789-00",
+  "Data de Nascimento": "20/12/1984",
+  "Endereço": "Rua Dunk, 123, Minneapolis, Los Angeles",
+  "Telefone": "(11) 98765-4321",
+  "Email": "James@email.com",
+  "Senha": "2688"
+}
