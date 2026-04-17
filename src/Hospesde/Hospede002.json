@@ -1,10 +1,27 @@
 {
-  "_id": "ObjectId('hsp002')",
-  "Nome": "LeBron James",
-  "CPF":  "123.456.789-00",
-  "Data de Nascimento": "20/12/1984",
-  "Endereço": "Rua Dunk, 123, Minneapolis, Los Angeles",
-  "Telefone": "(11) 98765-4321",
-  "Email": "James@email.com",
-  "Senha": "2688"
+  "id": "hsp003",
+  "nome": "LeBron James",
+  "cpf": null,
+  "dataNascimento": "1984-12-30",
+  "telefone": "12135551234",
+  "email": "lebron@gmail.com",
+  "senhaHash": "hash_aqui",
+  "nacionalidade": "Estados Unidos",
+  "endereco": {
+    "logradouro": "Sunset Blvd, 200",
+    "cidade": "Los Angeles",
+    "estado": "CA",
+    "cep": "90001",
+    "pais": "EUA"
+  },
+  "preferencias": {
+    "tipoQuarto": "luxo",
+    "alimentacao": "vegana",
+    "atividades": ["spa", "golf"],
+    "horarioCheckIn": "13:00",
+    "horarioCheckOut": "12:00",
+    "andarAlto": true,
+    "fumante": false,
+    "tipoCama": "king"
+  }
 }

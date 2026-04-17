@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="268089b4-5089-4e28-96cd-008ccd616bba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Hospede002.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hospesde001.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hospesde/HSP004.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hospesde/Hospesde003.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hospesde/Hospede002.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospesde/Hospede002.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hospesde/hospesde001.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospesde/hospesde001.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +76,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aluno\Desktop\Hotel---Corinthians-main\src\Hospesde" />
+    </key>
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
       <recent name="model" />
     </key>

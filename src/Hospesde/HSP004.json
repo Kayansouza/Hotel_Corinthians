@@ -1,0 +1,27 @@
+{
+  "id": "hsp004",
+  "nome": "Cliente Teste",
+  "cpf": null,
+  "dataNascimento": "2000-01-01",
+  "telefone": null,
+  "email": "teste@email.com",
+  "senhaHash": "hash_aqui",
+  "nacionalidade": "Desconhecida",
+  "endereco": {
+    "logradouro": "",
+    "cidade": "Rio de Janeiro",
+    "estado": "RJ",
+    "cep": "",
+    "pais": "Brasil"
+  },
+  "preferencias": {
+    "tipoQuarto": "standard",
+    "alimentacao": null,
+    "atividades": [],
+    "horarioCheckIn": "14:00",
+    "horarioCheckOut": "12:00",
+    "andarAlto": false,
+    "fumante": true,
+    "tipoCama": "solteiro"
+  }
+}
