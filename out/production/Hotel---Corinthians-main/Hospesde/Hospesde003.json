@@ -1,0 +1,27 @@
+{
+  "id": "hsp003",
+  "nome": "Lionel Messi",
+  "cpf": "12345678900",
+  "dataNascimento": "1987-06-24",
+  "telefone": "11987654321",
+  "email": "lionelmessi@gmail.com",
+  "senhaHash": "hash_aqui",
+  "nacionalidade": "Argentina",
+  "endereco": {
+    "logradouro": "Rua Barcelona, 123",
+    "cidade": "Barcelona",
+    "estado": "ESP",
+    "cep": "01310100",
+    "pais": "Espanha"
+  },
+  "preferencias": {
+    "tipoQuarto": "suite_master",
+    "alimentacao": "carnivora",
+    "atividades": ["spa", "academia", "piscina"],
+    "horarioCheckIn": "14:00",
+    "horarioCheckOut": "12:00",
+    "andarAlto": true,
+    "fumante": false,
+    "tipoCama": "king"
+  }
+}
