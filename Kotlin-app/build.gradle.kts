@@ -11,17 +11,20 @@ repositories {
 }
 
 dependencies {
-    // Kotlin padrão
     implementation(kotlin("stdlib"))
 
-    // JSON (muito útil pra APIs)
-    implementation("com.google.code.gson:gson:2.10.1")
+    // JSON (melhor opção moderna)
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.17.0")
 
-    // Logs (opcional mas profissional)
-    implementation("org.slf4j:slf4j-simple:2.0.9")
+    // Logs
+    implementation("ch.qos.logback:logback-classic:1.5.6")
 
     // Testes
-    testImplementation(kotlin("test"))
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
+}
+
+kotlin {
+    jvmToolchain(17)
 }
 
 application {
@@ -30,4 +33,11 @@ application {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+// --- ADICIONADO AQUI: Permite que o terminal leia o que você digita no teclado ---
+// Permite teclado e arruma a leitura de acentos/emojis no terminal
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
+    systemProperty("file.encoding", "UTF-8")
 }

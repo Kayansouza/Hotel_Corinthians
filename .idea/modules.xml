@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Desktop.Hotel---Corinthians-main.iml" filepath="$PROJECT_DIR$/.idea/modules/Desktop.Hotel---Corinthians-main.iml" />
       <module fileurl="file://$PROJECT_DIR$/Guarda/Hotel---Corinthians-main.iml" filepath="$PROJECT_DIR$/Guarda/Hotel---Corinthians-main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.iml" filepath="$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.test.iml" />
     </modules>
   </component>
 </project>
