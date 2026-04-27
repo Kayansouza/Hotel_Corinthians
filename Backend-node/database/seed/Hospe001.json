@@ -1,0 +1,92 @@
+[
+  {
+    "_id": 1,
+    "nome": "Richard Kayan",
+    "cargo": "Diretor de Tecnologia",
+    "departamento": "T.I",
+    "email": "rick.kayan@gmail.com",
+    "telefone": "+55 11 99123-4567",
+    "ativo": true
+  },
+  {
+    "_id": 2,
+    "nome": "Mayara Hellen",
+    "cargo": "Contadora",
+    "departamento": "Financeiro",
+    "email": "may.helle@gmail.com",
+    "telefone": "+55 21 99222-1111",
+    "ativo": true
+  },
+  {
+    "_id": 3,
+    "nome": "Ana Souza",
+    "cargo": "Desenvolvedora Front-end",
+    "departamento": "T.I",
+    "email": "ana.prado@hotelnebula.com",
+    "telefone": "+55 21 99333-2222",
+    "ativo": true
+  },
+  {
+    "_id": 4,
+    "nome": "Carlos Mendes",
+    "cargo": "Desenvolvedor Back-end",
+    "departamento": "T.I",
+    "email": "carlos.mendes@hotelnebula.com",
+    "telefone": "+55 11 98888-7777",
+    "ativo": true
+  },
+  {
+    "_id": 5,
+    "nome": "Juliana Alves",
+    "cargo": "UX/UI Designer",
+    "departamento": "T.I",
+    "email": "juliana.alves@hotelnebula.com",
+    "telefone": "+55 11 97777-6666",
+    "ativo": true
+  },
+  {
+    "_id": 6,
+    "nome": "Fernando Lima",
+    "cargo": "Gerente Financeiro",
+    "departamento": "Financeiro",
+    "email": "fernando.lima@hotelnebula.com",
+    "telefone": "+55 21 96666-5555",
+    "ativo": true
+  },
+  {
+    "_id": 7,
+    "nome": "Patrícia Rocha",
+    "cargo": "Recepcionista",
+    "departamento": "Atendimento",
+    "email": "patricia.rocha@hotelnebula.com",
+    "telefone": "+55 11 95555-4444",
+    "ativo": true
+  },
+  {
+    "_id": 8,
+    "nome": "Bruno Costa",
+    "cargo": "Supervisor de Hotelaria",
+    "departamento": "Operações",
+    "email": "bruno.costa@hotelnebula.com",
+    "telefone": "+55 11 94444-3333",
+    "ativo": true
+  },
+  {
+    "_id": 9,
+    "nome": "Camila Santos",
+    "cargo": "Analista de RH",
+    "departamento": "Recursos Humanos",
+    "email": "camila.santos@hotelnebula.com",
+    "telefone": "+55 21 93333-2222",
+    "ativo": true
+  },
+  {
+    "_id": 10,
+    "nome": "Lucas Ferreira",
+    "cargo": "Auxiliar de Limpeza",
+    "departamento": "Serviços Gerais",
+    "email": "lucas.ferreira@hotelnebula.com",
+    "telefone": "+55 11 92222-1111",
+    "ativo": true
+  }
+]

@@ -3,8 +3,8 @@
   <component name="NewModuleRootManager">
     <output-test url="file://$MODULE_DIR$/../../build/classes/java/test" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../src/test">
-      <sourceFolder url="file://$MODULE_DIR$/../../src/test/java" isTestSource="true" />
+    <content url="file://$MODULE_DIR$/../../Kotlin-app/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../Kotlin-app/src/test/java" isTestSource="true" />
     </content>
     <orderEntry type="jdk" jdkName="ms-21" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />

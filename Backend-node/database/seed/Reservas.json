@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "r1",
+    "cliente_id": "c1",
+    "quarto_id": "q2",
+    "data_entrada": "2026-05-01",
+    "data_saida": "2026-05-05",
+    "status": "ativa"
+  },
+  {
+    "_id": "r2",
+    "cliente_id": "c2",
+    "quarto_id": "q1",
+    "data_entrada": "2026-05-03",
+    "data_saida": "2026-05-06",
+    "status": "ativa"
+  },
+  {
+    "_id": "r3",
+    "cliente_id": "c3",
+    "quarto_id": "q3",
+    "data_entrada": "2026-04-20",
+    "data_saida": "2026-04-25",
+    "status": "finalizada"
+  },
+  {
+    "_id": "r4",
+    "cliente_id": "c1",
+    "quarto_id": "q4",
+    "data_entrada": "2026-05-10",
+    "data_saida": "2026-05-15",
+    "status": "cancelada"
+  },
+  {
+    "_id": "r5",
+    "cliente_id": "c4",
+    "quarto_id": "q2",
+    "data_entrada": "2026-05-07",
+    "data_saida": "2026-05-10",
+    "status": "ativa"
+  }
+]

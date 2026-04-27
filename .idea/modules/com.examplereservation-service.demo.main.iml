@@ -3,9 +3,9 @@
   <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/../../build/classes/java/main" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../src/main">
-      <sourceFolder url="file://$MODULE_DIR$/../../src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../src/main/resources" type="java-resource" />
+    <content url="file://$MODULE_DIR$/../../Kotlin-app/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../Kotlin-app/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../Kotlin-app/src/main/resources" type="java-resource" />
     </content>
     <orderEntry type="jdk" jdkName="ms-21" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />

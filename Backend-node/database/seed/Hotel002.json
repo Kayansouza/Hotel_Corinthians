@@ -1,0 +1,17 @@
+[
+  { "_id": "q1", "numero": 101, "tipo": "standard", "preco": 150, "status": "disponivel" },
+  { "_id": "q2", "numero": 102, "tipo": "standard", "preco": 150, "status": "ocupado" },
+  { "_id": "q3", "numero": 201, "tipo": "luxo", "preco": 250, "status": "disponivel" },
+  { "_id": "q4", "numero": 202, "tipo": "luxo", "preco": 250, "status": "manutencao" },
+  {"_id": "q5", "numero": 310, "tipo": "executivo", "preco": 300, "status": "disponivel"},
+  {"_id": "q5", "numero": 320, "tipo": "executivo", "preco": 300, "status": "ocupado"},
+  {"_id": "q5", "numero": 420, "tipo": "luxo", "preco": 300, "status": "disponivel"},
+  {"_id": "q5", "numero": 400, "tipo": "luxo", "preco": 300, "status": "disponivel"},
+  {"_id": "q5", "numero": 301, "tipo": "executivo", "preco": 300, "status": "disponivel"},
+  {"_id": "q5", "numero": 301, "tipo": "executivo", "preco": 300, "status": "disponivel"},
+  {"_id": "q5", "numero": 500, "tipo": "executivo", "preco": 300, "status": "disponivel"},
+  {"_id": "q5", "numero": 502, "tipo": "executivo", "preco": 300, "status": "disponivel"},
+  {"_id": "q5", "numero": 520, "tipo": "executivo", "preco": 300, "status": "ocupado"},
+  {"_id": "q5", "numero": 525, "tipo": "Standard", "preco": 150, "status": "ocupado"},
+  {"_id": "q5", "numero": 526, "tipo": "executivo", "preco": 300, "status": "disponivel"}
+]
