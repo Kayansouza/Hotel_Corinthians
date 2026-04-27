@@ -5,32 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="268089b4-5089-4e28-96cd-008ccd616bba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Backend-node/Server/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend-node/database/seed/Hospe001.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend-node/database/seed/Hotel002.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend-node/database/seed/Reservas.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend-node/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/gc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel---Corinthian/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel---Corinthian/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel---Corinthians-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel---Corinthians-main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservation-service" beforeDir="false" afterPath="$PROJECT_DIR$/Reservation-service" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservation-service/.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservation-service/.gitignore" beforeDir="false" />
@@ -126,82 +100,6 @@
       <change beforePath="$PROJECT_DIR$/Reservation-service/src/security/service/ReservationService.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservation-service/src/security/service/TipoGasolina.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservation-service/src/test/java/com/examplereservation_service/demo/DemoApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resolvedMainClassName" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/Hospesde/HSP004.json" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/Hospesde/HSP004.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/Hospesde/Hospede002.json" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/Hospesde/Hospede002.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/Hospesde/Hospesde003.json" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/Hospesde/Hospesde003.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/Hospesde/hospesde001.json" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/Hospesde/hospesde001.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/META-INF/Hotel---Corinthians-main.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/MainKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/controller/ArCondicionadoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/controller/AuthController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/controller/EventoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/controller/FuncionarioController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/controller/HospedeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/controller/HotelController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/controller/RelatorioController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/controller/ReservaController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/controller/UsuarioController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/model/Abastecimento.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/model/Cliente.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/model/Funcinario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/model/Hospede.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/model/Quarto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/model/Reservation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/model/TipoGasolina.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/model/salao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/security/ConfiguraçaoDelogin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/security/Permissao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/security/service/ArCondicionadoService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/security/service/AuthService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/security/service/EmailService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/security/service/EventoService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/security/service/FinanceiroService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/security/service/Funcionario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/security/service/HospedeSerivce.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/security/service/PasswordService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/security/service/ReservaSalaoKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/security/service/ReservationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/security/service/ReservationServiceKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Hotel---Corinthians-main/security/service/TipoGasolina.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospesde/HSP004.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospesde/Hospede002.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospesde/Hospesde003.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospesde/hospesde001.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ArCondicionadoController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/controller/ArCondicionadoController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/AuthController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/controller/AuthController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/EventoController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/controller/EventoController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/FuncionarioController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/controller/FuncionarioController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/HospedeController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/controller/HospedeController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/HotelController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/controller/HotelController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/RelatorioController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/controller/RelatorioController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ReservaController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/controller/ReservaController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/UsuarioController.kt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/controller/UsuarioController.kt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Abastecimento.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/model/Abastecimento.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Cliente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/model/Cliente.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Funcionario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/model/Funcionario.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Hospedes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/model/Hospedes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Quarto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/model/Quarto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Reservation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/model/Reservation.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Usuario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/model/Usuario.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/salao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/model/salao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/ConfiguraçaoDelogin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/security/ConfiguraçaoDelogin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/Permissao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/service/ArCondicionadoService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/security/service/ArCondicionadoService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/service/AuthService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/security/service/AuthService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/service/ChurrasService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/service/EmailService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/security/service/EmailService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/service/EventoService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/security/service/EventoService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/service/FinanceiroService.kt.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/service/Funcionario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/security/service/Funcionario.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/service/HospedeService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/security/service/HospedeService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/service/PassaWordService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/security/service/PassaWordService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/service/ReservaSalao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/security/service/ReservaSalao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/service/ReservationService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/security/service/ReservationService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/service/TipoGasolina.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/security/service/TipoGasolina.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,11 +173,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aluno\Desktop\Hotel---Corinthians-main\Guarda" />
       <recent name="C:\Users\Aluno\Desktop\Hotel---Corinthians-main\Kotlin-app" />
       <recent name="C:\Users\Aluno\Desktop\Hotel---Corinthians-main\Backend-node" />
       <recent name="C:\Users\Aluno\Desktop\Hotel---Corinthians-main\Backend-node\node_modules" />
       <recent name="C:\Users\Aluno\Desktop\Hotel---Corinthians-main\Backend-node\Server" />
-      <recent name="C:\Users\Aluno\Desktop\Hotel---Corinthians-main\database\seed" />
     </key>
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
       <recent name="model" />
