@@ -5,20 +5,184 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="268089b4-5089-4e28-96cd-008ccd616bba" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gradle/8.14/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.14/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.14/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.14/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.14/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.14/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules/Desktop.Hotel---Corinthians-main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/demo.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/demo.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/8.14/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/8.14/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/8.14/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/8.14/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/8.14/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/8.14/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/8.14/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/8.14/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/8.14/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/8.14/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/file-system.probe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Kotlin-app/.idea/modules/kotlin-app.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Kotlin-app/.idea/modules/kotlin-app.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/META-INF/kotlin-app.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/MainKt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/controller/ArCondicionadoController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/controller/AuthController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/controller/EventoController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/controller/FuncionarioController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/controller/HospedeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/controller/HotelController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/controller/RelatorioController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/controller/ReservaController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/controller/UsuarioController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/model/Abastecimento.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/model/Cliente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/model/Funcionario.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/model/Hospede.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/model/Quarto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/model/Reservation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/model/TipoGasolina.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/model/salao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/security/ConfiguraçaoDelogin.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/security/service/ArCondicionadoService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/security/service/AuthService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/security/service/EmailService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/security/service/EventoService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/security/service/Funcionario.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/security/service/HospedeSerivce.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/security/service/PasswordService$criptografarSenha$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/security/service/PasswordService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/security/service/ReservaSalaoKt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/security/service/ReservationService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/security/service/TipoGasolina.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/classes/kotlin/main/state/HotelState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.values.at" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/counters.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab_i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab_i.len" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/cacheable/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/kotlin/compileKotlin/local-state/build-history.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/build/reports/problems/problems-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/gradlew.bat" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Kotlin-app/src/main/kotlin/Main.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Kotlin-app/src/main/kotlin/controller/FuncionarioController.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Kotlin-app/src/main/kotlin/controller/UsuarioController.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Kotlin-app/src/main/kotlin/model/Funcionario.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kotlin-app/src/main/kotlin/model/Usuario.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Kotlin-app/src/main/kotlin/security/service/ReservaSalao.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Kotlin-app/src/main/kotlin/state/HotelState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/demo/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__biz_aQute_bnd_biz_aQute_bnd_annotation_7_1_0.xml" beforeDir="false" />
@@ -126,9 +290,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__tools_jackson_core_jackson_core_3_1_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__tools_jackson_core_jackson_databind_3_1_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/demo.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/com.examplereservation-service.demo.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/demo.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hotel---Corinthian/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel---Corinthian/.idea/workspace.xml" afterDir="false" />
@@ -153,7 +317,7 @@
       <change beforePath="$PROJECT_DIR$/Kotlin-app/src/model/Hospedes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/main/kotlin/model/Hospedes.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Kotlin-app/src/model/Quarto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/main/kotlin/model/Quarto.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Kotlin-app/src/model/Reservation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/main/kotlin/model/Reservation.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kotlin-app/src/model/Usuario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/main/kotlin/model/Usuario.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kotlin-app/src/model/Usuario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14/gc.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Kotlin-app/src/model/salao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/main/kotlin/model/salao.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Kotlin-app/src/security/ConfiguraçaoDelogin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/main/kotlin/security/ConfiguraçaoDelogin.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Kotlin-app/src/security/service/ArCondicionadoService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin-app/src/main/kotlin/security/service/ArCondicionadoService.kt" afterDir="false" />

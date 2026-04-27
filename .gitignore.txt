@@ -1,15 +1,5 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-
-# IntelliJ
-.idea/
-
-# Build
-out/
-build/
 .gradle/
-
-# Kotlin / Java
-*.class
-*.log
+build/
+.idea/
+*.iml
+out/
