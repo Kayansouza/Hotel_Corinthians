@@ -1,0 +1,10 @@
+[
+  { "_id": "backend_sr", "nome": "Backend Sênior" },
+  { "_id": "backend_jr", "nome": "Backend Júnior" },
+  { "_id": "frontend_dev", "nome": "Frontend Developer" },
+  { "_id": "analista_dados", "nome": "Analista de Dados" },
+  { "_id": "devops", "nome": "DevOps" },
+  { "_id": "designer", "nome": "Designer" },
+  { "_id": "gerente", "nome": "Gerente" },
+  { "_id": "suporte", "nome": "Suporte" }
+]

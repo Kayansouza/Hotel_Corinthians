@@ -1,0 +1,11 @@
+[
+  { "_id": "tec", "nome": "Tecnologia" },
+  { "_id": "rh", "nome": "Recursos Humanos" },
+  { "_id": "fin", "nome": "Financeiro" },
+  { "_id": "ops", "nome": "Operações" },
+  { "_id": "analista_dados"},
+  { "_id": "devops", "nome": "DevOps" },
+  { "_id": "designer", "nome": "Designer" },
+  { "_id": "gerente", "nome": "Gerente" },
+  { "_id": "suporte", "nome": "Suporte" }
+]

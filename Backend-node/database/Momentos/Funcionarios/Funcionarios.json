@@ -1,0 +1,452 @@
+[
+  {
+    "name": "Richard Kayan",
+    "roleId": "backend_sr",
+    "departmentId": "tech",
+    "location": {
+      "office": "São Paulo",
+      "country": "BR"
+    },
+    "salary": {
+      "amount": 1000,
+      "currency": "BRL"
+    }
+  },
+  {
+    "name": "Mayara Hellen",
+    "roleId": "data_analyst",
+    "departmentId": "tech",
+    "location": {
+      "office": "São Paulo",
+      "country": "BR"
+    },
+    "salary": {
+      "amount": 7800,
+      "currency": "BRL"
+    }
+  },
+  {
+    "name": "Ana Souza",
+    "roleId": "frontend_dev",
+    "departmentId": "tech",
+    "location": {
+      "office": "São Paulo",
+      "country": "BR"
+    },
+    "salary": {
+      "amount": 5000,
+      "currency": "BRL"
+    }
+  },
+  {
+    "name": "Cauan Moraria",
+    "roleId": "backend_jr",
+    "departmentId": "tech",
+    "location": {
+      "office": "São Paulo",
+      "country": "BR"
+    },
+    "salary": {
+      "amount": 7000,
+      "currency": "BRL"
+    }
+  },
+  {
+    "name": "Carlos Mendes",
+    "roleId": "devops",
+    "departmentId": "tech",
+    "location": {
+      "office": "São Paulo",
+      "country": "BR"
+    },
+    "salary": {
+      "amount": 6000,
+      "currency": "BRL"
+    }
+  },
+  {
+    "name": "Juliana Alves",
+    "roleId": "designer",
+    "departmentId": "tech",
+    "location": {
+      "office": "São Paulo",
+      "country": "BR"
+    },
+    "salary": {
+      "amount": 4500,
+      "currency": "BRL"
+    }
+  },
+  {
+    "name": "Fernando Lima",
+    "roleId": "manager",
+    "departmentId": "tech",
+    "location": {
+      "office": "São Paulo",
+      "country": "BR"
+    },
+    "salary": {
+      "amount": 7000,
+      "currency": "BRL"
+    }
+  },
+  {
+    "name": "Patrícia Rocha",
+    "roleId": "support",
+    "departmentId": "tech",
+    "location": {
+      "office": "São Paulo",
+      "country": "BR"
+    },
+    "salary": {
+      "amount": 4000,
+      "currency": "BRL"
+    }
+  },
+  {
+    "name": "Breno Faria",
+    "roleId": "data_analyst",
+    "departmentId": "tech",
+    "location": {
+      "office": "São Paulo",
+      "country": "BR"
+    },
+    "salary": {
+      "amount": 4000,
+      "currency": "BRL"
+    }
+  },
+
+  [
+    {
+        "name": "Mariana Silva",
+        "roleId": "hr_manager",
+        "departmentId": "rh",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 8000,
+            "currency": "BRL"
+        }
+    },
+
+    {
+        "name": "Lucas Oliveira",
+        "roleId": "recruiter",
+        "departmentId": "rh",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 5000,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Sofia Costa",
+        "roleId": "hr_specialist",
+        "departmentId": "rh",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 4500,
+            "currency": "BRL"
+        }
+    }
+  ],
+
+  [
+    {
+        "name": "Maria Dandara",
+        "roleId": "finance_manager",
+        "departmentId": "fin",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 9000,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Fernanda Lima",
+        "roleId": "accountant",
+        "departmentId": "fin",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 5500,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Gustavo Pereira",
+        "roleId": "financial_analyst",
+        "departmentId": "fin",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 6000,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Carla Mendes",
+        "roleId": "Estagiário Financeiro",
+        "departmentId": "fin",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 3000,
+            "currency": "BRL"
+        }
+    }
+],
+
+  [
+    {
+        "name": "Ricardo Santos",
+        "roleId": "operations_manager",
+        "departmentId": "ops",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 8500,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Amanda Costa",
+        "roleId": "logistics_coordinator",
+        "departmentId": "ops",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 5000,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Bruno Oliveira",
+        "roleId": "supply_chain_analyst",
+        "departmentId": "ops",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 5500,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Larissa Silva",
+        "roleId": "operations_coordinator",
+        "departmentId": "ops",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 4500,
+            "currency": "BRL"
+        }
+    }
+  ],
+
+
+  [
+    {
+        "name": "Eduardo Almeida",
+        "roleId": "data_analyst",
+        "departmentId": "analista_dados",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 7000,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Larissa Silva",
+        "roleId": "data_analyst",
+        "departmentId": "analista_dados",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 6500,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Breno Faria",
+        "roleId": "data_analyst",
+        "departmentId": "analista_dados",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 6000,
+            "currency": "BRL"
+        }
+    }
+  ],
+
+  [
+    {
+        "name": "Carlos Mendes",
+        "roleId": "devops",
+        "departmentId": "devops",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 6000,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Fernanda Lima",
+        "roleId": "devops",
+        "departmentId": "devops",
+        "location": {
+            "office": "Belo Horizonte",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 5500,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Milena Santana",
+        "roleId": "devops",
+        "departmentId": "devops",
+        "location": {
+            "office": "Rio de Janeiro",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 6500,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Ricardo Santos",
+        "roleId": "devops",
+        "departmentId": "devops",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 7000,
+            "currency": "BRL"
+        }
+    }
+  ],
+
+  [
+    {
+        "name": "Juliana Alves",
+        "roleId": "designer",
+        "departmentId": "designer",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 4500,
+            "currency": "BRL"
+        }
+    },
+
+    {
+        "name": "Larissa Silva",
+        "roleId": "designer",
+        "departmentId": "designer",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 5000,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Amanda Costa",
+        "roleId": "designer",
+        "departmentId": "designer",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 4800,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Bruno Oliveira",
+        "roleId": "designer",
+        "departmentId": "designer",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 4700,
+            "currency": "BRL"
+        }
+    },
+    {
+        "name": "Carla Mendes",
+        "roleId": "designer",
+        "departmentId": "designer",
+        "location": {
+            "office": "São Paulo",
+            "country": "BR"
+        },
+        "salary": {
+            "amount": 4500,
+            "currency": "BRL"
+        }
+    }
+  ]
+
+
+
+
+
+
+
+
+
+
+
+
+]
+
