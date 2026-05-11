@@ -1,113 +1,181 @@
-# 🏨 Hotel Corinthians - Sistema de Gestão de Hotel
+# 🏨 Hotel Corinthians
 
-Sistema desenvolvido em **Kotlin** com o objetivo de simular a gestão de um hotel, incluindo controle de quartos, cadastro de clientes e funcionários, além de reservas para eventos especiais.
-
-O projeto foi criado como prática de **lógica de programação, organização de código e desenvolvimento de sistemas**.
+Sistema de gestão hoteleira moderno desenvolvido com Kotlin + Spring Boot + MongoDB, focado em escalabilidade, organização de dados e integração entre aplicações web e mobile.
 
 ---
 
-# ⚽ Contexto do Projeto
+## 🚀 Sobre o Projeto
 
-O sistema simula o funcionamento de um hotel temático do Corinthians, onde diferentes eventos podem ocorrer, como:
+O Hotel Corinthians nasceu com o objetivo de centralizar e modernizar a gestão de um sistema hoteleiro completo.
 
-- 🎉 Aniversário do Corinthians
-- 📅 Eventos especiais em datas específicas
-- 🏨 Reservas feitas por clientes VIP e clientes comuns
+O projeto foi desenvolvido pensando em uma arquitetura escalável capaz de gerenciar:
 
-O hotel possui **50 quartos**, que podem ser reservados para eventos ou clientes.
+- hóspedes
+- quartos
+- reservas
+- hospedagens
+- pagamentos
+- avaliações
+- serviços internos
 
----
-
-# 🚀 Funcionalidades
-
-✔ Cadastro de clientes  
-✔ Cadastro de funcionários  
-✔ Controle de 50 quartos do hotel  
-✔ Verificação de disponibilidade de quartos  
-✔ Reserva de quartos por evento  
-✔ Sistema de validação para evitar reservas duplicadas  
+Além disso, o sistema foi estruturado visando futuras integrações com aplicações web, mobile e APIs REST.
 
 ---
 
-# 🧠 Lógica do Sistema
+# 🧠 Arquitetura do Sistema
 
-O sistema funciona utilizando **listas dinâmicas em Kotlin**, que armazenam:
+O projeto utiliza uma arquitetura backend moderna baseada em:
 
-- Clientes cadastrados
-- Funcionários
-- Reservas
-- Status dos quartos (Livre / Ocupado)
+- Kotlin
+- Spring Boot
+- MongoDB
+- REST APIs
+- JWT Authentication
+- Repository Pattern
 
-Exemplo da lógica de reserva:
+A modelagem foi construída utilizando conceitos NoSQL para garantir:
 
+✅ flexibilidade  
+✅ escalabilidade  
+✅ performance  
+✅ facilidade de manutenção
 
-```kotlin
-if (numQuarto != null && numQuarto in 1..50) {
-    val index = numQuarto - 1
-    if (quartos[index] == "Livre") {
-        quartos[index] = "Ocupado - $nomeEventos"
-        println("Quarto reservado com sucesso")
-    }
+---
 
+# 🛠️ Tecnologias Utilizadas
 
-src
- ├── model
- │    ├── Cliente.kt
- │    ├── Funcionario.kt
- │
- ├── services
- │    ├── ClienteService.kt
- │    ├── FuncionarioService.kt
- │
- ├── reservas
- │    └── SistemaReserva.kt
- │
- └── Main.kt
-}
+## Backend
+- Kotlin
+- Spring Boot
+- Spring Security
+- JWT
+- MongoDB
+- Gradle
 
-🛠 Tecnologias Utilizadas
+## Banco de Dados
+- MongoDB
+- JSON Documents
 
-Kotlin
+## Futuro Frontend
+- React.js
+- TailwindCSS
 
-Programação Orientada a Objetos
+## Futuro Mobile
+- Kotlin Android
+- React Native (em estudo)
 
-Estrutura de dados (List / MutableList)
+---
 
-IntelliJ IDEA
+# 📂 Estrutura do Projeto
 
-Git & GitHub
+```bash
+src/main/kotlin/
+│
+├── controller/
+├── service/
+├── repository/
+├── dto/
+├── model/
+├── security/
+├── config/
+└── utils/
+```
 
-📚 Objetivo do Projeto
+---
 
-Este projeto foi desenvolvido com o objetivo de:
+# 🔐 Segurança
 
-Praticar lógica de programação
+O sistema já possui estrutura inicial de autenticação e segurança utilizando:
 
-Aprender organização de sistemas
+- Spring Security
+- JWT Token
+- Camadas de autenticação
+- Services dedicados para segurança
 
-Trabalhar com estrutura de dados
+---
 
-Utilizar Git e GitHub no desenvolvimento
+# 🏨 Funcionalidades
 
-👨‍💻 Autor
+## 👤 Gestão de Hóspedes
+- cadastro
+- atualização
+- histórico de hospedagens
 
-Richard Kayan de Souza
+## 🛏️ Gestão de Quartos
+- quartos premium
+- luxo
+- disponibilidade
+- características personalizadas
 
-📎 GitHub
-https://github.com/Kayansouza
+## 📅 Reservas
+- check-in/check-out
+- reservas futuras
+- controle de ocupação
 
-📎 LinkedIn
-https://br.linkedin.com/in/richard-kayan-de-souza-91a532204
+## 💳 Pagamentos
+- histórico financeiro
+- controle de faturamento
+- pagamentos por hospedagem
 
-🔮 Melhorias Futuras
+## ⭐ Feedbacks
+- avaliações
+- comentários
+- experiência do hóspede
 
-Sistema de login para funcionários
+---
 
-Banco de dados para armazenar reservas
+# 📊 Consultas Inteligentes
 
-Interface gráfica
+O sistema foi modelado para suportar consultas como:
 
-API para integração com aplicativos
+- quartos mais reservados
+- períodos de maior ocupação
+- faturamento mensal/anual
+- hóspedes recorrentes
+- avaliações dos clientes
 
-Sistema de reservas por data
+---
 
+# 🌐 Futuras Implementações
+
+- API REST completa
+- dashboard administrativo
+- integração web/mobile
+- sistema de notificações
+- IA para recomendações
+- analytics e relatórios
+- deploy cloud
+- Docker
+
+---
+
+# 🎯 Objetivo do Projeto
+
+O principal objetivo do projeto é praticar:
+
+- desenvolvimento backend moderno
+- modelagem NoSQL
+- arquitetura de sistemas
+- APIs REST
+- integração entre serviços
+- escalabilidade de aplicações
+
+---
+
+# 📸 Preview
+
+> Em desenvolvimento 🚧
+
+---
+
+# 👨‍💻 Desenvolvedor
+
+Desenvolvido por Richard Kayan.
+
+📌 Focado em desenvolvimento Backend | Full Stack | APIs | Kotlin | Spring Boot
+
+---
+
+# ⭐ Considerações
+
+Este projeto faz parte da minha evolução profissional na área de tecnologia, aplicando conceitos reais de arquitetura backend, banco de dados e integração de sistemas.
