@@ -12,7 +12,7 @@ import java.math.RoundingMode
 
 @Service
 class CurrencyService(
-    @Value("\${currency.api.key}") private val apiKey: String,
+    @Value("\${currency.api.key:test}") private val apiKey: String,
     private val restTemplate: RestTemplate
 ) {
     private val apiUrl = "https://v6.exchangerate-api.com/v6/"
@@ -26,9 +26,6 @@ class CurrencyService(
         val response = restTemplate.getForObject(url, CurrencyResponse::class.java)
             ?: throw IllegalStateException("Falha ao obter taxas de câmbio")
 
-        // Aqui resolvemos a ambiguidade:
-        // O Kotlin se confunde entre construtores de Double/Long.
-        // Usar .toBigDecimal() ou BigDecimal.valueOf() resolve o erro de compilação.
         val rateTo = response.rates[toCurrency]?.toBigDecimal()
             ?: throw IllegalArgumentException("Moeda de destino ($toCurrency) não suportada")
 

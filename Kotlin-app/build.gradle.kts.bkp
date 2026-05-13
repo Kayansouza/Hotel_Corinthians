@@ -66,3 +66,7 @@ tasks.named<Test>("test") {
 tasks.withType<org.springframework.boot.gradle.tasks.run.BootRun> {
     standardInput = System.`in`
 }
+
+springBoot {
+    mainClass.set("com.kayan.hotel_corinthians_backend.MainKt")
+}
